@@ -1,0 +1,21 @@
+
+{% from "_formhelpers.html" import render_field %}
+<title>Wine Quality Predictor</title>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul>
+                    {% for message in messages %}
+ 	<li>{ { message[1] }}</li>
+{% endfor %}</ul>
+{% endif %}
+{% endwith %}
+
+<form method=post>
+  <dl>
+    {{ render_field(form.vintage) }}
+    {{ render_field(form.province) }}
+    {{ render_field(form.price) }}
+  </dl>
+  <p><input type=submit>
+</form>
