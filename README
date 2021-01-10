@@ -1,1 +1,6 @@
-Give detailed instructions for how to run your code here.
+Instructions differ with what you intend to do. If you would like to test our trained network, simply go to https://wine-predictor-63.herokuapp.com/
+and enter the vintage, province, and price of the wine you'd like to predict. You must only select a wine from a province in the dropdown menu for 
+the same field. After you've done this click "submit". If you'd like to try again with another wine, you can do so by simply going back a page in 
+your browser. If you would like to train the network on a different dataset or simply retrain on the dataset we have then enter into your terminal 
+in this directory "python3 wine_network_regression.py". If you aren't using a virtual environment with all of the modules installed that we use, then
+ensure that you have these modules installed on your computer.
