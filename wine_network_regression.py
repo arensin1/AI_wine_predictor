@@ -12,12 +12,6 @@ import tensorflow as tf
 
 def read_data(num_vectors):
     """
-    Reads in images of dogs and cats from a fixed directory containing
-    approximately 25,000 images.  Each image has been resized and padded
-    so that it's shape is (128, 128, 3).  Each image filename indicates
-    whether it is an image of a dog or a cat.
-    Do not copy these images to your own directory! Just read them from
-    the given directory.
     num_patterns: Allows you to limit the number of patterns to include
     in the data set.  It's recommended that you use a subset of the data for
     testing, particularly early on, so your runs complete faster.
@@ -107,7 +101,7 @@ def test_results(num_vectors, x_test, y_test):
 num_vectors = 24000
 inp_vecs, tar_vecs = read_data(num_vectors)
 index = num_vectors*0.8
-# TODO: Divide the data into training and testing sets
+# Divide the data into training and testing sets
 inp_train = inp_vecs[:int(index)]
 tar_train_vectors = tar_vecs[:int(index)]
 
@@ -116,7 +110,7 @@ tar_test_vectors = tar_vecs[int(index+1):]
 
 
 
-# TODO: Construct the model
+#  Construct the model
 neural_net = Sequential()
 neural_net.add(Dense(256, input_dim=(318),activation='relu'))
 neural_net.add(Dropout(0.15))
